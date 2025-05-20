@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OJI Store Topup Open AI</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d0d2b;
+      color: white;
+    }
+    .container {
+      padding: 20px;
+    }
+    .card {
+      background-color: #1f1f4b;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    textarea {
+      width: 100%;
+      padding: 15px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: none;
+      resize: none;
+      box-sizing: border-box;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 20px;
+      background: linear-gradient(to right, #00bfff, #9b00ff);
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      text-align: center;
+    }
+    .section-title {
+      text-align: center;
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .features li {
+      margin-bottom: 10px;
+      list-style: none;
+      padding-left: 20px;
+      position: relative;
+    }
+    .features li::before {
+      content: "✅";
+      position: absolute;
+      left: 0;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .note {
+      font-size: 13px;
+      color: #ccc;
+      margin-top: 10px;
+    }
+    #response {
+      margin-top: 15px;
+      padding: 15px;
+      background-color: #292968;
+      border-radius: 10px;
+      font-size: 16px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="section-title">OJISTORE TOPUP OPEN AI</div>
+      <textarea id="userInput" rows="5" placeholder="Tanyakan apa saja… / Pesan Anda Kepada Kami…"></textarea>
+      <div class="note"> CATATAN : Silahkan masukkan pertanyaan apa saja, Ai kami otomatis akan memberikan jawaban dari pertanyaan atau pesan yang kalian masukkan...</div>
+      <button class="button" onclick="showResponse()">Tekan Di Sini Untuk Melihat Jawaban</button>
+      <div id="response">MOHON MAAF KAK SEPERTINYA DEVELOPER KAMI BELUM MEMASUKAN KEY OPEN AI JADI BELUM BISA MENGGUNAKAN AI KAMI</div>
+    </div>
+
+    <div class="card">
+      <div class="section-title">KEUNGGULAN OJI AI</div>
+      <ul class="features">
+        <li>Mudah Di Gunakan - Ai kami sangat mudah di gunakan untuk siapa saja, walaupun orang awam.</li>
+        <li>Pesan Akurat - Menampilkan hasil pesan dengan akurat.</li>
+        <li>Gratis & Anti limit - Gunakan ai kami sepuasnya tanpa limit.</li>
+        <li>ON 24 Jam Nonstop - Ai kami siap membantu anda 24 jam.</li>
+      </ul>
+    </div>
+
+    <div class="card" style="text-align: center;">
+      <p>© 2025 Open Ai OjiStore. Allright Reserved</p>
+    </div>
+  </div>
+
+  <script>
+    function showResponse() {
+      const inputBox = document.getElementById('userInput');
+      const responseBox = document.getElementById('response');
+      const inputText = inputBox.value.trim();
+
+      if (inputText !== "") {
+        inputBox.value = '';
+        responseBox.style.display = 'block';
+        responseBox.textContent = "MOHON MAAF KAK SEPERTINYA DEVELOPER KAMI BELUM MEMASUKAN API KEY OPEN AI JADI BELUM BISA DIGUNAKAN";
+      } else {
+        responseBox.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>
